@@ -99,7 +99,28 @@ class SplashScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: 20, // Adjust the bottom margin as needed
+              top: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                width: 150,
+                height: 100,
+                color: Colors.white,
+                child: Center(
+                  child: Text(
+                    'Your Text Box',
+                    style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 20,
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
