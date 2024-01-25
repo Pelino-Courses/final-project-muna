@@ -1,47 +1,51 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: SplashScreen(),
     );
   }
 }
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: 390,
         height: 844,
-        color: Color(0xFFDA5E48),
+        color: const Color(0xFFDA5E48),
         child: Stack(
           children: [
-            Positioned(
+            const Positioned(
               left: 25,
               top: 13,
-              child: Container(
+              child: SizedBox(
                 width: 338,
                 height: 21.43,
                 // ... (existing code for PhoneNotification)
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 10,
               top: 304,
-              child: Container(
+              child: SizedBox(
                 width: 370.21,
                 height: 272,
                 // ... (existing code for UndrawConferenceRe2yld1)
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 117,
               top: 99,
               child: Text(
@@ -54,7 +58,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 180,
               top: 99,
               child: Text(
@@ -67,7 +71,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 54,
               top: 166,
               child: Text(
@@ -80,7 +84,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 116,
               top: 190,
               child: Text(
@@ -105,13 +109,12 @@ class SplashScreen extends StatelessWidget {
                     // Add any additional functionality here
                   },
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                    primary: Colors.white,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15), backgroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Join Now',
                     style: TextStyle(
                       color: Color(0xFF2F2E41),
