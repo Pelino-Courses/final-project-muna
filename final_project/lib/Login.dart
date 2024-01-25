@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:techme/constants.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
-import 'package:techme/screens/register_screen.dart';
-import 'package:techme/screens/otp_screen.dart';
-import 'package:techme/screens/password_recover.dart';
+import 'package:techme/OTP_verficatin_creen.dart';
+import 'package:techme/recovery.dart';
+import 'package:techme/register.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -15,6 +15,11 @@ class LoginScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double height = size.height;
     double width = size.width;
+    var tOrangeColor;
+    var tWhiteColor;
+    var tDarkBlueColor;
+    var tLightBlueColor;
+    var tGreyColor;
     return Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -171,7 +176,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.to(() => const OTPScreen());
+                          Get.to(() => const HomeApp());
                         },
                         child: Container(
                           width: width,
