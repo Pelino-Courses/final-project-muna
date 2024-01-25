@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:techme/constants.dart';
+import 'package:techme/Login.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
-import 'package:techme/screens/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
@@ -12,6 +12,9 @@ class RegisterScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double height = size.height;
     double width = size.width;
+    var tOrangeColor;
+    var tWhiteColor;
+    var tDarkBlueColor;
     return Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,

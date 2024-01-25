@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:techme/constants.dart';
+import 'package:techme/Login.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:techme/screens/login_screen.dart';
 
 class PasswordRecoverScreen extends StatelessWidget {
   const PasswordRecoverScreen({super.key});
@@ -13,6 +13,10 @@ class PasswordRecoverScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double height = size.height;
     double width = size.width;
+    var tOrangeColor;
+    var tWhiteColor;
+    var tDarkBlueColor;
+    var tLightBlueColor;
     return Scaffold(
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
@@ -137,8 +141,8 @@ class PasswordRecoverScreen extends StatelessWidget {
                   child: SizedBox(
                     width: width * 0.8,
                     height: height * 0.3,
-                    child: SvgPicture.string(
-                      svgString1,
+                    child: SvgPicture.asset(
+                      'assets/svg/about.svg',
                       fit: BoxFit.cover,
                     ),
                   ),
