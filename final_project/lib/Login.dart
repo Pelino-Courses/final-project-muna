@@ -1,5 +1,3 @@
-flutter create my_login_app
-cd my_login_app
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
