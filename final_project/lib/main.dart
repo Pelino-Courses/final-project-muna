@@ -1,127 +1,150 @@
 import 'package:flutter/material.dart';
-import 'package:techme/constants.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-import 'package:techme/screens/login_screen.dart';
 
-class JoinScreen extends StatelessWidget {
-  const JoinScreen({super.key});
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    double height = size.height;
-    double width = size.width;
+    return MaterialApp(
+      home: SplashScreen(),
+    );
+  }
+}
+
+class SplashScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Container(
-          width: width,
-          height: height,
-          decoration: BoxDecoration(
-            color: tOrangeColor,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Tech",
-                    style: GoogleFonts.poppins(
-                        color: tWhiteColor,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40),
-                  ),
-                  Text(
-                    "Me",
-                    style: GoogleFonts.poppins(
-                      color: tDarkBlueColor,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 40,
-                    ),
-                  ),
-                ],
+      body: Container(
+        width: 390,
+        height: 844,
+        color: Color(0xFFDA5E48),
+        child: Stack(
+          children: [
+            Positioned(
+              left: 25,
+              top: 13,
+              child: Container(
+                width: 338,
+                height: 21.43,
+                // ... (existing code for PhoneNotification)
               ),
-              const SizedBox(
-                height: 15,
+            ),
+            Positioned(
+              left: 10,
+              top: 304,
+              child: Container(
+                width: 370.21,
+                height: 272,
+                // ... (existing code for UndrawConferenceRe2yld1)
               ),
-              Text(
-                "Accelerating Tech with confidence",
-                style: GoogleFonts.poppins(
-                  color: tWhiteColor,
+            ),
+            Positioned(
+              left: 117,
+              top: 99,
+              child: Text(
+                'Tech',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 38,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 180,
+              top: 99,
+              child: Text(
+                'Me',
+                style: TextStyle(
+                  color: Color(0xFF3F3D56),
+                  fontSize: 38,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 54,
+              top: 166,
+              child: Text(
+                'Accelerating Tech with confidence',
+                style: TextStyle(
+                  color: Color.fromRGBO(255, 255, 255, 0.90),
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
                   fontWeight: FontWeight.w600,
-                  fontSize: 17,
                 ),
               ),
-              const SizedBox(
-                height: 5,
+            ),
+            Positioned(
+              left: 116,
+              top: 190,
+              child: Text(
+                'East Africa’s Biggest\nTech Con Hub',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Color(0xFFCACACA),
+                  fontSize: 15,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w600,
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "East Africa’s Biggest",
-                    style: GoogleFonts.poppins(
-                      color: tGreyColor,
+            ),
+            Positioned(
+              top: 0,
+              right: 0,
+              bottom: 0,
+              child: Container(
+                width: 150,
+                height: 100,
+                color: Colors.white,
+                child: Center(
+                  child: Text(
+                    'Your Text Box',
+                    style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w600,
-                      fontSize: 17,
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 20,
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Handle button press
+                    print('Join Now pressed!');
+                    // Add any additional functionality here
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                    primary: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
                   ),
-                  Text(
-                    "Tech Con Hub",
-                    style: GoogleFonts.poppins(
-                      color: tGreyColor,
+                  child: Text(
+                    'Join Now',
+                    style: TextStyle(
+                      color: Color(0xFF2F2E41),
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w600,
-                      fontSize: 17,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: height * 0.05,
-              ),
-              SizedBox(
-                width: width * 0.8,
-                height: height * 0.4,
-                child: SvgPicture.string(
-                  svgString,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              SizedBox(
-                height: height * 0.05,
-              ),
-              GestureDetector(
-                onTap: () {
-                  Get.to(() => const LoginScreen());
-                },
-                child: Container(
-                  width: width * 0.85,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: tDarkBlueColor,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "Join Now",
-                      style: GoogleFonts.poppins(
-                        color: tWhiteColor,
-                        fontWeight: FontWeight.normal,
-                        fontSize: 20,
-                      ),
                     ),
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+            ),
+          ],
         ),
       ),
     );
